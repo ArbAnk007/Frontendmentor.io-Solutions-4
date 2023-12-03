@@ -12,7 +12,7 @@ const getData = async () => {
     const adviceCounerParaElement = document.createElement("p");
     const adviceParaElement = document.createElement("p");
     const counterNode = document.createTextNode(`ADVICE #${adviceCounter}`);
-    const adviceNode = document.createTextNode(finalData.slip.advice);
+    const adviceNode = document.createTextNode(`"${finalData.slip.advice}"`);
     adviceCounerParaElement.appendChild(counterNode);
     adviceCounterContainer.appendChild(adviceCounerParaElement);
     adviceParaElement.appendChild(adviceNode);
