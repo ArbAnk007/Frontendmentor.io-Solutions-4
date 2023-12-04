@@ -1,4 +1,4 @@
-const url = "https://api.adviceslip.com/advice/117";
+const url = "https://api.adviceslip.com/advice";
 const adviceCounterContainer = document.querySelector(".advice-count-container");
 const adviceContainer = document.querySelector(".advice-container");
 const changeQuoteBtn = document.querySelector(".dice-container");
@@ -7,7 +7,7 @@ let adviceCounter = JSON.parse(localStorage.getItem("adviceCounter")) || 1;
 const getData = async () => {
     adviceContainer.innerHTML = "";
     adviceCounterContainer.innerHTML = "";
-    const response = await fetch(url, {cache: "no-cache"});
+    const response = await fetch(url);
     const finalData = await response.json();
     const adviceCounerParaElement = document.createElement("p");
     const adviceParaElement = document.createElement("p");
