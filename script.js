@@ -7,7 +7,7 @@ let adviceCounter = JSON.parse(localStorage.getItem("adviceCounter")) || 1;
 const getData = async () => {
     adviceContainer.innerHTML = "";
     adviceCounterContainer.innerHTML = "";
-    const response = await fetch(url {cache: "no-cache"});
+    const response = await fetch(url, {cache: "no-cache"});
     const finalData = await response.json();
     const adviceCounerParaElement = document.createElement("p");
     const adviceParaElement = document.createElement("p");
